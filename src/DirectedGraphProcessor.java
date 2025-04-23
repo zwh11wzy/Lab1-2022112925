@@ -2,11 +2,9 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
-import java.awt.event.*;
 import java.io.*;
 import java.util.*;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class DirectedGraphProcessor {
     // 图结构定义
@@ -623,6 +621,7 @@ public class DirectedGraphProcessor {
     }
 
     // 计算PageRank值
+// 计算PageRank值
     public Double calcPageRank(String word) {
         if (graph.isEmpty()) {
             return null;
@@ -634,20 +633,64 @@ public class DirectedGraphProcessor {
             return null;
         }
 
+        // 计算单词频率 (TF)
+        Map<String, Integer> wordFrequency = new HashMap<>();
+        int totalWords = 0;
+
+        // 统计每个单词出现的频率
+        for (String node : graph.keySet()) {
+            // 计算入度和出度总和作为词频估计
+            int frequency = 0;
+
+            // 入度计算
+            for (String source : graph.keySet()) {
+                if (graph.get(source).containsKey(node)) {
+                    frequency += graph.get(source).get(node);
+                }
+            }
+
+            // 出度计算
+            for (Map.Entry<String, Integer> edge : graph.get(node).entrySet()) {
+                frequency += edge.getValue();
+            }
+
+            // 确保每个单词至少有1的频率
+            frequency = Math.max(1, frequency);
+            wordFrequency.put(node, frequency);
+            totalWords += frequency;
+        }
+
+        // 计算文档频率的倒数 (IDF)
+        Map<String, Double> idf = new HashMap<>();
+        for (String node : graph.keySet()) {
+            // 单词频率占总词频的比例
+            double ratio = (double) wordFrequency.get(node) / totalWords;
+            // IDF公式: log(1/ratio) = -log(ratio)
+            idf.put(node, Math.log(1.0 / (ratio + 0.01))); // 加0.01防止除以0
+        }
+
+        // 计算TF-IDF值
+        Map<String, Double> tfidf = new HashMap<>();
+        double tfidfSum = 0.0;
+
+        for (String node : graph.keySet()) {
+            double score = wordFrequency.get(node) * idf.get(node);
+            tfidf.put(node, score);
+            tfidfSum += score;
+        }
+
+        // 归一化TF-IDF值作为初始PageRank
+        Map<String, Double> pageRank = new HashMap<>();
+        for (String node : graph.keySet()) {
+            pageRank.put(node, tfidf.get(node) / tfidfSum);
+        }
+
         // 设置参数
         double d = 0.85; // 阻尼系数
         int iterations = 100; // 迭代次数
         double epsilon = 1e-8; // 收敛阈值
 
-        // 初始化PageRank值
-        Map<String, Double> pageRank = new HashMap<>();
         Map<String, Double> newPageRank = new HashMap<>();
-
-        // 初始化为均匀分布
-        double initialRank = 1.0 / graph.size();
-        for (String node : graph.keySet()) {
-            pageRank.put(node, initialRank);
-        }
 
         // 计算所有节点的出度
         Map<String, Integer> outDegrees = new HashMap<>();
@@ -680,7 +723,7 @@ public class DirectedGraphProcessor {
                 }
 
                 // 计算新的PageRank值
-                double newRank = (1 - d) / graph.size() + d * sum;
+                double newRank = (1 - d) * tfidf.get(node) / tfidfSum + d * sum;
                 newPageRank.put(node, newRank);
 
                 // 计算与上一次迭代的差异
@@ -704,6 +747,7 @@ public class DirectedGraphProcessor {
 
         return pageRank.get(word);
     }
+
 
     // 随机游走
     public String randomWalk() {
@@ -812,7 +856,7 @@ public class DirectedGraphProcessor {
 
         // 尝试使用GraphViz渲染（如果系统中安装了）
         try {
-            Process process = Runtime.getRuntime().exec("dot -Tpng -o graph.png graph.dot");
+            Process process = Runtime.getRuntime().exec("C:\\Program Files (x86)\\Graphviz2.38\\bin\\dot.exe dot -Tpng -o graph.png graph.dot");
             process.waitFor();
         } catch (Exception e) {
             // 如果GraphViz不可用，只保存DOT文件
