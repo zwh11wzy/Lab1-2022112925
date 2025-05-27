@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbad5759-dbdd-4266-8172-63a15bfd12e2" name="更改" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyleidea-libs/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DirectedGraphProcessorTest.java" afterDir="false" />
+    <list default="true" id="dbad5759-dbdd-4266-8172-63a15bfd12e2" name="更改" comment="黑盒测试代码增加DirectedGraphProcessorTest.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Se-Lab1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Se-Lab1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/random_walk.txt" beforeDir="false" afterPath="$PROJECT_DIR$/random_walk.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DirectedGraphProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DirectedGraphProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DirectedGraphProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DirectedGraphProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +43,13 @@
     "JUnit.DirectedGraphProcessorTest.TC_BW_03_queryBridgeWords_noBridge_wordsExist_caseInsensitive.executor": "Run",
     "JUnit.DirectedGraphProcessorTest.TC_BW_04_queryBridgeWords_word1NotExist.executor": "Run",
     "JUnit.DirectedGraphProcessorTest.TC_WB_07_queryBridgeWords_path_checkFormattingLogicPath_singleBridge.executor": "Run",
-    "JUnit.DirectedGraphProcessorTest.executor": "Debug",
+    "JUnit.DirectedGraphProcessorTest.executor": "Coverage",
+    "JUnit.DirectedGraphProcessorTest.generateNewText_BBT_GNT_01_withBridgeWords.executor": "Run",
+    "JUnit.DirectedGraphProcessorTest.generateNewText_BBT_GNT_02_noBridgeWords.executor": "Run",
+    "JUnit.DirectedGraphProcessorTest.generateNewText_BBT_GNT_03_wordsNotInGraph.executor": "Run",
+    "JUnit.DirectedGraphProcessorTest.generateNewText_BBT_GNT_04_emptyInput.executor": "Run",
+    "JUnit.DirectedGraphProcessorTest.generateNewText_BBT_GNT_05_singleWordInput.executor": "Run",
+    "JUnit.DirectedGraphProcessorTest.generateNewText_BBT_GNT_06_graphEmpty.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -84,52 +85,51 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DirectedGraphProcessorTest.TC_WB_07_queryBridgeWords_path_checkFormattingLogicPath_singleBridge">
-    <configuration name="DirectedGraphProcessorTest.TC_BW_01_queryBridgeWords_oneBridge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DirectedGraphProcessorTest">
+    <configuration name="DirectedGraphProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Se-Lab1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
-      <option name="METHOD_NAME" value="TC_BW_01_queryBridgeWords_oneBridge" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DirectedGraphProcessorTest.generateNewText_BBT_GNT_03_wordsNotInGraph" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Se-Lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
+      <option name="METHOD_NAME" value="generateNewText_BBT_GNT_03_wordsNotInGraph" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DirectedGraphProcessorTest.TC_BW_02_queryBridgeWords_anotherOneBridge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DirectedGraphProcessorTest.generateNewText_BBT_GNT_04_emptyInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Se-Lab1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
-      <option name="METHOD_NAME" value="TC_BW_02_queryBridgeWords_anotherOneBridge" />
+      <option name="METHOD_NAME" value="generateNewText_BBT_GNT_04_emptyInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DirectedGraphProcessorTest.TC_BW_03_queryBridgeWords_noBridge_wordsExist_caseInsensitive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DirectedGraphProcessorTest.generateNewText_BBT_GNT_05_singleWordInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Se-Lab1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
-      <option name="METHOD_NAME" value="TC_BW_03_queryBridgeWords_noBridge_wordsExist_caseInsensitive" />
+      <option name="METHOD_NAME" value="generateNewText_BBT_GNT_05_singleWordInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DirectedGraphProcessorTest.TC_BW_04_queryBridgeWords_word1NotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DirectedGraphProcessorTest.generateNewText_BBT_GNT_06_graphEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Se-Lab1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
-      <option name="METHOD_NAME" value="TC_BW_04_queryBridgeWords_word1NotExist" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DirectedGraphProcessorTest.TC_WB_07_queryBridgeWords_path_checkFormattingLogicPath_singleBridge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Se-Lab1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
-      <option name="METHOD_NAME" value="TC_WB_07_queryBridgeWords_path_checkFormattingLogicPath_singleBridge" />
+      <option name="METHOD_NAME" value="generateNewText_BBT_GNT_06_graphEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DirectedGraphProcessorTest.TC_WB_07_queryBridgeWords_path_checkFormattingLogicPath_singleBridge" />
-        <item itemvalue="JUnit.DirectedGraphProcessorTest.TC_BW_04_queryBridgeWords_word1NotExist" />
-        <item itemvalue="JUnit.DirectedGraphProcessorTest.TC_BW_03_queryBridgeWords_noBridge_wordsExist_caseInsensitive" />
-        <item itemvalue="JUnit.DirectedGraphProcessorTest.TC_BW_02_queryBridgeWords_anotherOneBridge" />
-        <item itemvalue="JUnit.DirectedGraphProcessorTest.TC_BW_01_queryBridgeWords_oneBridge" />
+        <item itemvalue="JUnit.DirectedGraphProcessorTest" />
+        <item itemvalue="JUnit.DirectedGraphProcessorTest.generateNewText_BBT_GNT_06_graphEmpty" />
+        <item itemvalue="JUnit.DirectedGraphProcessorTest.generateNewText_BBT_GNT_05_singleWordInput" />
+        <item itemvalue="JUnit.DirectedGraphProcessorTest.generateNewText_BBT_GNT_04_emptyInput" />
+        <item itemvalue="JUnit.DirectedGraphProcessorTest.generateNewText_BBT_GNT_03_wordsNotInGraph" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +162,7 @@
       <workItem from="1748243794730" duration="173000" />
       <workItem from="1748243985317" duration="1178000" />
       <workItem from="1748259491391" duration="621000" />
-      <workItem from="1748304319083" duration="7925000" />
+      <workItem from="1748304319083" duration="11843000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -188,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745412688210</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="黑盒测试代码增加DirectedGraphProcessorTest.java">
+      <option name="closed" value="true" />
+      <created>1748319919825</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748319919825</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +204,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="黑盒测试代码增加DirectedGraphProcessorTest.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="黑盒测试代码增加DirectedGraphProcessorTest.java" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Se_Lab1$DirectedGraphProcessorTest.ic" NAME="DirectedGraphProcessorTest 覆盖结果" MODIFIED="1748321569982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

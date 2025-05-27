@@ -1,0 +1,30 @@
+digraph G {
+  rankdir=LR;
+  node [shape=circle, style=filled, fillcolor=lightblue];
+  "but" -> "the" [label="1", weight=1];
+  "a" -> "detailed" [label="1", weight=1];
+  "shared" -> "the" [label="1", weight=1];
+  "data" -> "wrote" [label="1", weight=1];
+  "data" -> "so" [label="1", weight=1];
+  "carefully" -> "analyzed" [label="1", weight=1];
+  "scientist" -> "carefully" [label="1", weight=1];
+  "scientist" -> "analyzed" [label="1", weight=1];
+  "more" -> "data" [label="1", weight=1];
+  "wrote" -> "a" [label="1", weight=1];
+  "analyzed" -> "the" [label="1", weight=1];
+  "analyzed" -> "it" [label="1", weight=1];
+  "team" -> "but" [label="1", weight=1];
+  "team" -> "requested" [label="1", weight=1];
+  "it" -> "again" [label="1", weight=1];
+  "the" -> "data" [label="1", weight=1];
+  "the" -> "scientist" [label="2", weight=2];
+  "the" -> "report" [label="1", weight=1];
+  "the" -> "team" [label="2", weight=2];
+  "with" -> "the" [label="1", weight=1];
+  "requested" -> "more" [label="1", weight=1];
+  "detailed" -> "report" [label="1", weight=1];
+  "and" -> "shared" [label="1", weight=1];
+  "report" -> "with" [label="1", weight=1];
+  "report" -> "and" [label="1", weight=1];
+  "so" -> "the" [label="1", weight=1];
+}

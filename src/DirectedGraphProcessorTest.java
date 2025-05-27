@@ -174,4 +174,62 @@ class DirectedGraphProcessorTest {
         assertEquals("scientist carefully analyzed", generatedText, "generateNewText test with bridge words failed.");
     }
     */
+    // --- Black-box Tests for generateNewText ---
+
+    @Test
+    void generateNewText_BBT_GNT_01_withBridgeWords() {
+//        loadGraphFromContent(TEST_FILE_CONTENT_EASY);
+        String inputText = "analyzed data";
+//        String result = processor.generateNewText(inputText);
+        String generatedText = graphProcessor.generateNewText(inputText);
+        // Based on "analyzed the data", "the" is a bridge word.
+        assertEquals("analyzed the data", generatedText, "Test Case BBT_GNT_01 Failed: Bridge word 'the' expected.");
+    }
+
+    @Test
+    void generateNewText_BBT_GNT_02_noBridgeWords() {
+//        loadGraphFromContent(TEST_FILE_CONTENT_EASY);
+        // "wrote a detailed report". "a" is bridge between "wrote" and "detailed".
+        // To test "no bridge words", we need a pair that genuinely has no bridge.
+        // E.g., "scientist" and "team". Original: "...scientist analyzed ... team requested..."
+        // No direct word1 -> X -> word2 path.
+        String inputText = "scientist team";
+//        String result = processor.generateNewText(inputText);
+        String generatedText = graphProcessor.generateNewText(inputText);
+        assertEquals("scientist team", generatedText, "Test Case BBT_GNT_02 Failed: No bridge word expected.");
+    }
+
+    @Test
+    void generateNewText_BBT_GNT_03_wordsNotInGraph() {
+//        loadGraphFromContent(TEST_FILE_CONTENT_EASY);
+        String inputText = "unknown word";
+//        String result = processor.generateNewText(inputText);
+        String generatedText = graphProcessor.generateNewText(inputText);
+        assertEquals("unknown word", generatedText, "Test Case BBT_GNT_03 Failed: Words not in graph.");
+    }
+
+    @Test
+    void generateNewText_BBT_GNT_04_emptyInput() {
+//        loadGraphFromContent(TEST_FILE_CONTENT_EASY); // Graph state doesn't strictly matter
+        String inputText = "";
+        String generatedText = graphProcessor.generateNewText(inputText);
+        assertEquals("", generatedText, "Test Case BBT_GNT_04 Failed: Empty input.");
+    }
+
+    @Test
+    void generateNewText_BBT_GNT_05_singleWordInput() {
+//        loadGraphFromContent(TEST_FILE_CONTENT_EASY);
+        String inputText = "scientist";
+//        String result = processor.generateNewText(inputText);
+        String generatedText = graphProcessor.generateNewText(inputText);
+        assertEquals("scientist", generatedText, "Test Case BBT_GNT_05 Failed: Single word input.");
+    }
+
+    @Test
+    void generateNewText_BBT_GNT_06_graphEmpty() {
+        // DO NOT load graph for this test. Processor is fresh, graph is empty.
+        String inputText = "any text";
+        String generatedText = graphProcessor.generateNewText(inputText);
+        assertEquals("No graph exists. Please load a file first.", generatedText, "Test Case BBT_GNT_06 Failed: Graph empty message expected.");
+    }
 }
