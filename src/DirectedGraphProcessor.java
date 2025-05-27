@@ -1,7 +1,7 @@
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
 import java.util.*;
 import java.util.List;
@@ -26,7 +26,7 @@ public class DirectedGraphProcessor {
             }
 
             DirectedGraphProcessor app = new DirectedGraphProcessor();
-            app.createAndShowGUI();
+            app.createAndShowGui();
 
             // 如果有命令行参数，则尝试读取文件
             if (args.length > 0) {
@@ -35,7 +35,7 @@ public class DirectedGraphProcessor {
         });
     }
 
-    private void createAndShowGUI() {
+    private void createAndShowGui() {
         // 创建主窗口
         mainFrame = new JFrame("Directed Graph Processor");
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -277,7 +277,7 @@ public class DirectedGraphProcessor {
         return panel;
     }
 
-    private void loadFile(File file) {
+    void loadFile(File file) {
         try {
             currentFileName = file.getName();
             outputArea.setText("Loading file: " + file.getName() + "\n");
@@ -799,6 +799,9 @@ public class DirectedGraphProcessor {
 
             // 检查是否重复访问边
             if (visitedEdges.contains(edge)) {
+                // 更新当前节点和路径
+                currentNode = nextNode;
+                path.add(currentNode);
                 break;
             }
 

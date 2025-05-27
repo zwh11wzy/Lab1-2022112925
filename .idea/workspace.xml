@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbad5759-dbdd-4266-8172-63a15bfd12e2" name="更改" comment="update">
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyleidea-libs/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DirectedGraphProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Se-Lab1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Se-Lab1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/random_walk.txt" beforeDir="false" afterPath="$PROJECT_DIR$/random_walk.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DirectedGraphProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DirectedGraphProcessor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,9 +42,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.DirectedGraphProcessorTest.TC_BW_01_queryBridgeWords_oneBridge.executor": "Run",
+    "JUnit.DirectedGraphProcessorTest.TC_BW_02_queryBridgeWords_anotherOneBridge.executor": "Run",
+    "JUnit.DirectedGraphProcessorTest.TC_BW_03_queryBridgeWords_noBridge_wordsExist_caseInsensitive.executor": "Run",
+    "JUnit.DirectedGraphProcessorTest.TC_BW_04_queryBridgeWords_word1NotExist.executor": "Run",
+    "JUnit.DirectedGraphProcessorTest.TC_WB_07_queryBridgeWords_path_checkFormattingLogicPath_singleBridge.executor": "Run",
+    "JUnit.DirectedGraphProcessorTest.executor": "Debug",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "2022112925",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "git-widget-placeholder": "Lab3b",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/IdeaProjects/Se-Lab1",
     "node.js.detected.package.eslint": "true",
@@ -40,9 +67,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "D:/IdeaProjects/Se-Lab1/src/Main.java",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "settings.findbugs.project",
     "vue.rearranger.settings.migration": "true",
-    "应用程序.DirectedGraphProcessor.executor": "Debug",
+    "应用程序.DirectedGraphProcessor.executor": "Run",
     "应用程序.Main.executor": "Run"
   }
 }]]></component>
@@ -50,6 +77,73 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IdeaProjects\Se-Lab1" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.DirectedGraphProcessorTest.TC_WB_07_queryBridgeWords_path_checkFormattingLogicPath_singleBridge">
+    <configuration name="DirectedGraphProcessorTest.TC_BW_01_queryBridgeWords_oneBridge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Se-Lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
+      <option name="METHOD_NAME" value="TC_BW_01_queryBridgeWords_oneBridge" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DirectedGraphProcessorTest.TC_BW_02_queryBridgeWords_anotherOneBridge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Se-Lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
+      <option name="METHOD_NAME" value="TC_BW_02_queryBridgeWords_anotherOneBridge" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DirectedGraphProcessorTest.TC_BW_03_queryBridgeWords_noBridge_wordsExist_caseInsensitive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Se-Lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
+      <option name="METHOD_NAME" value="TC_BW_03_queryBridgeWords_noBridge_wordsExist_caseInsensitive" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DirectedGraphProcessorTest.TC_BW_04_queryBridgeWords_word1NotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Se-Lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
+      <option name="METHOD_NAME" value="TC_BW_04_queryBridgeWords_word1NotExist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DirectedGraphProcessorTest.TC_WB_07_queryBridgeWords_path_checkFormattingLogicPath_singleBridge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Se-Lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DirectedGraphProcessorTest" />
+      <option name="METHOD_NAME" value="TC_WB_07_queryBridgeWords_path_checkFormattingLogicPath_singleBridge" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DirectedGraphProcessorTest.TC_WB_07_queryBridgeWords_path_checkFormattingLogicPath_singleBridge" />
+        <item itemvalue="JUnit.DirectedGraphProcessorTest.TC_BW_04_queryBridgeWords_word1NotExist" />
+        <item itemvalue="JUnit.DirectedGraphProcessorTest.TC_BW_03_queryBridgeWords_noBridge_wordsExist_caseInsensitive" />
+        <item itemvalue="JUnit.DirectedGraphProcessorTest.TC_BW_02_queryBridgeWords_anotherOneBridge" />
+        <item itemvalue="JUnit.DirectedGraphProcessorTest.TC_BW_01_queryBridgeWords_oneBridge" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -62,7 +156,13 @@
       <workItem from="1745321408959" duration="1453000" />
       <workItem from="1745322881776" duration="2174000" />
       <workItem from="1745377215959" duration="9639000" />
-      <workItem from="1745410575107" duration="1800000" />
+      <workItem from="1745410575107" duration="3585000" />
+      <workItem from="1745453563540" duration="3827000" />
+      <workItem from="1747655356442" duration="108000" />
+      <workItem from="1748243794730" duration="173000" />
+      <workItem from="1748243985317" duration="1178000" />
+      <workItem from="1748259491391" duration="621000" />
+      <workItem from="1748304319083" duration="7925000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -80,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745408637489</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <option name="closed" value="true" />
+      <created>1745412688210</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745412688210</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
